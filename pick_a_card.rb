@@ -1,11 +1,8 @@
-# 123
 # Массивы с наборами мастей и достоинств
 values = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
-suits = ['♦', '♠', '♥', '♣'] # Буби, Черви, Крести, Пики
+suits = ['♦', '♠', '♥', '♣'] # Буби, Пики, Черви, Крести
 
-# Выведем произвольную карты, выбрав по одному элементу из массивов
-#puts "#{values.sample}#{suits.sample}"
-
+# Создаём и перемешиваем колоду из 52х карт
 cards = []
 values.each do |value|
   suits.each do |suit|
@@ -18,10 +15,7 @@ cards.shuffle!
 puts "How many cards do you pick?"
 number = gets.to_i
 
+#Достаём указанное количество карт
 number.times do
   puts cards.pop
-
-
-
-
 end
